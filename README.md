@@ -1,13 +1,13 @@
-# Landing Page Project
-
-## Table of Contents
-
-* [Instructions](#instructions)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+# landing page
+project for more practice javascript end ES6
+# functions
+## Up
+function to move the page to up when press the goup button
+## goUp
+function to show and hide the goup button depend on the view when scroll
+## hideNav
+function to hide the navigaation bar
+## showNav
+function to show the nav bar
+## onScroll
+function to add or remove active class to the section that i scrolled into

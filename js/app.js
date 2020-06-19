@@ -40,9 +40,10 @@ up = () => {
 }
 
 hideNav = () => {
-    timer = setTimeout(() => {
-        document.querySelector(".page__header").style.display = "none";
-    }, 3000);
+    if (window.innerHeight < pageYOffset)
+        timer = setTimeout(() => {
+            document.querySelector(".page__header").style.display = "none";
+        }, 3000);
 }
 
 showNav = () => {
@@ -64,9 +65,15 @@ sections.forEach(element => {
     let node2 = document.createElement("a");
     count++;
     node2.style = "color: white;text-decoration-line: none;"
-    node2.href = "#" + element.id;
     let textnode = document.createTextNode(element.querySelector("h2").textContent);
     section_array.push(element.id);
+    node.addEventListener("click", (event) => {
+        // Line below does not work!
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end'
+        });
+    });
     array.push(element.offsetTop);
     node2.appendChild(textnode);
     node.appendChild(node2);
